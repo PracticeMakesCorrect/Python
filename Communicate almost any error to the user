@@ -1,0 +1,19 @@
+This will output a more readable version of the error the code encountered when it was run. 
+Will work for: most errors
+Will not work for: 
+  SyntaxError during initial compilation
+  Memory Errors
+  SystemExit or KeyboardInterrupt
+  Segmentation Faults
+  Interpreter Shutdown
+
+---------------
+
+try:
+    print(x)
+except SyntaxError as e:
+    print(f"SyntaxError occurred: {str(e)}")
+except Exception as e:
+    print(f"Another error occurred: {str(e)}")
+except BaseException as e:
+    print(f"Critical error occurred: {str(e)}")
